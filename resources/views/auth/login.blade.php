@@ -4,7 +4,7 @@
 <div class="div-container-fluid">
     <div class="row">
         <div class="col-md-4 offset-md-4">
-            <h1>Login</h1>
+            <h1 class="text-decoration-underline">Login</h1>
             @if(Session::has('error'))
             <p class="text-danger">{{Session::get('error')}}</p>
             @endif
@@ -15,7 +15,7 @@
             <form action="{{route('login')}}" method="post">
             @csrf
             @method('post')
-            <div class="mb-3">
+            <div class="mb-3 mt-4">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
@@ -23,7 +23,7 @@
                     <p class="text-danger">{{ $errors->first('email')}}</p>
                 @endif
             </div>
-            <div class="mb-3 text-right">
+            <div class="mb-5 text-right">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 @if($errors->has('password'))

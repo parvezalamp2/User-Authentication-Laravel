@@ -14,7 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 
     </head>
-    <body class="antialiased">
+    <body class="antialiased d-flex flex-column min-vh-100">
         <div class="mb-4">
         @if (Route::has('login'))
         <nav class="navbar navbar-expand-lg bg-light">
@@ -43,8 +43,16 @@
         </nav>
         @endif
         </div>
-        <div class="div offset-md-4 mt-5">
-        <h3>Click on the Menu Bar To Login or Register</h3>
+        <div class="d-flex justify-content-center">
+        <img src="https://i.ibb.co/6ZPq1YS/Pngtree-man-user-login-id-identity-5254197.png%22%20alt=%22Pngtree-man-user-login-id-identity-5254197%22%20border=%220%22" width="400px" height="400px"></img>
         </div>
+        <div class="d-flex justify-content-center mt-auto">
+        <h3><em>Click on the Menu Bar or here To <a class="" href="{{ route('login') }}">Login</a> or @if (Route::has('register'))
+                        <a  href="{{ route('register') }}">Register</a>
+                        @endif</em></h3>
+        </div>
+        <footer class="mt-auto text-center">
+            <em><strong>Created by Parvez Alam</strong></em>
+        </footer>
     </body>
 </html>
