@@ -19,7 +19,7 @@
         @if (Route::has('login'))
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Website</a>
+                <a class="navbar-brand" href="#">Authentication Platform</a>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                     @auth
